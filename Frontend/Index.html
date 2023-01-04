@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./Assets/Images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./Assets/Styles/Spinner.css">
+    <link rel="stylesheet" href="./Assets/Styles/Style.css">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap"
+        rel="stylesheet">
+    <title>Image generator</title>
+</head>
+
+<body class="flex flex-col min-h-screen justify-between">
+    <nav>
+        <div class="justify-between w-full flex items-center px-8 sm:px-20 py-3"
+            style="background-color: rgba(0, 0, 0, 0.2);">
+            <div>
+                <img src="./Assets/Images/logo.png" class="h-8" alt="...">
+            </div>
+            <div>
+                <h6 class="font-bold">Soft Image Generator</h6>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="w-full justify-center flex">
+            <form id="img-form" class="flex text-center justify-center w-full mx-5 max-w-lg flex-col gap-6">
+                <h1 class="font-extrabold">Describe An Image</h1>
+                <div>
+                    <input type="text" id="prompt"
+                        class="border border-gray-400 text-gray-900 text-base rounded-lg  block w-full p-3"
+                        placeholder="Enter Text">
+                </div>
+                <div>
+                    <select id="size" name="size"
+                        class=" border border-gray-400 text-gray-900 text-base rounded-lg block w-full p-3">
+                        <option selected disabled>Choose your preferred size</option>
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                    </select>
+                </div>
+                <div class="flex justify-center">
+                    <button type="submit"
+                        class="bg-transparent hover:bg-gray-500 text-gray-700 font-semibold hover:text-white py-2 px-4 border border-gray-500 hover:border-transparent rounded">
+                        Generate
+                    </button>
+                </div>
+            </form>
+        </div>
+        <section class="image">
+            <div class="image-container flex justify-center w-full">
+                <h2 class="error-message flex justify-content"></h2>
+                <img class="mx-6 flex max-w-sm mb-6 sm:max-w-lg justify-center" src="" alt="" id="image" />
+            </div>
+        </section>
+    </main>
+    <footer class="text-center">
+        <div class="text-gray-700 text-center p-4" style="background-color: rgba(0, 0, 0, 0.2);">
+            ©
+            <script>
+                document.write(new Date().getFullYear());
+            </script> Copyright
+            <a class="text-gray-800" href="#">Soft Image Genrator</a>
+        </div>
+    </footer>
+
+    <div class="spinner"></div>
+</body>
+<script src="./Assets/Javascript/Script.js"></script>
+
+</html>
